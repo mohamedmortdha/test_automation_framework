@@ -49,9 +49,8 @@ I Succeed to make finance callback from brand
 
 I Succeed to make finance callback from Recently Viewed
   [Tags]  Ios_en_fiance_recently_view
-  I can navigate to List Brand
-  I can navigate to List of models  Audi
-  I can navigate to the details of the model  Audi  A5 Coupe
+  I visit a model and back to menu  Audi  Q7
+  I select mode From Recently Viewed
   I can make a Request finance Callback  100  2 years  Mohamd Amine  6677  66770000  123456789012
   I go back to menu from model finance callback details Recently Review
   [Teardown]  NONE
