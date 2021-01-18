@@ -23,17 +23,17 @@ I Succeed to make a Request callback from brand
 
 I Succeed to make a Request callback from Recently Viewed
   [Tags]  Ios_ar_callback_recently_view
-  I visit a model and back to menu  شانجان  سي أس 95 كلاسيك
+  I visit a model and back to menu  شانجان  سي اس 75
   I select mode From Recently Viewed
   I can make a Request Callback  Mohamd Amine  6677  66770000
   I go back to menu from model details Recently Viewed
 
 I Succeed to make a Request callback from FAVORITES
   [Tags]  Ios_ar_callback_FAVORITES
-  I visit a model add it to favorites and back to menu  شانجان  سي أس 95 كلاسيك
+  I visit a model add it to favorites and back to menu  شانجان  سي اس 75
   I can Open Menu
   I select favorites Item
-  I select mode From favorites List  سي أس 95 كلاسيك
+  I select mode From favorites List  سي اس 75
   I can make a Request Callback  Mohamd Amine  6677  66770000
   I go back to menu from model details favorites
 
@@ -44,6 +44,13 @@ I Succeed to make a Request finance callback from brand
   I can navigate to the details of the model  شانجان  CS 85
   I can make a Request finance Callback  100  2 سنوات  Mohamd Amine  6677  66770000  123456789012
   I go back to menu from model finance callback details  
+
+I Succeed to make finance callback from Recently Viewed
+  [Tags]  Ios_ar_fiance_callback_brand_recently_view 
+  I visit a model and back to menu  شانجان  سي اس 75
+  I select mode From Recently Viewed
+  I can make a Request finance Callback  100  2 سنوات  Mohamd Amine  6677  66770000  123456789012
+  I go back to menu from model finance callback details Recently Review 
   [Teardown]  NONE
 
 
@@ -240,10 +247,10 @@ I Should be on List Brand
 
 I Should Sees Sub Categories
   Page Should Contain Element  accessibility_id=الجديدة
-  Page Should Contain Element  accessibility_id=Certified
-  Page Should Contain Element  accessibility_id=Leasing
-  Page Should Contain Element  accessibility_id=Rent
-  Page Should Contain Element  accessibility_id=Maintenance
+  Page Should Contain Element  accessibility_id=المعتمدة
+  Page Should Contain Element  accessibility_id=الإيجار
+  Page Should Contain Element  accessibility_id=الإيجار اليومي
+  Page Should Contain Element  accessibility_id=الصيانة
 
 
 I Should Sees List Brands
