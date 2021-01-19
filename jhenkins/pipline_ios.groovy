@@ -1,9 +1,11 @@
 pipeline {
-    agent { docker { image 'python:3.7.2' } }
+    agent any
+
     stages {
-        stage('build') {
+        stage('Hello') {
             steps {
-                sh 'pip install -r requirements.txt'
+                sh 'python -V '
+                sh 'python -m pip -v '
             }
         }
     }
