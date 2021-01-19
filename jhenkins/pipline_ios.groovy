@@ -4,8 +4,9 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                sh 'python -V '
-                sh 'python -m pip -v '
+                withPythonEnv(python) {
+                    sh 'python -V '
+                    sh 'pip -v '}
             }
         }
     }
