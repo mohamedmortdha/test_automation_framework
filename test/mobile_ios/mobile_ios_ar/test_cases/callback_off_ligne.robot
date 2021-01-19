@@ -215,6 +215,7 @@ I have access to the List of models
 
 I should Sees the List of model
   [Arguments]  ${brand_name}
+  Run Keyword And Ignore Error  Wait and close Pub
   Wait Until Element Is Visible  xpath=//XCUIElementTypeStaticText[@name="الفرع الرئيسي"]
   Wait Until Element Is Visible  xpath=//XCUIElementTypeStaticText[@name="${brand_name}"]
   Wait Until Element Is Visible  xpath=//XCUIElementTypeApplication[@name="Showroomz_refac"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTable/XCUIElementTypeCell
