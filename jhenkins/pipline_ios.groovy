@@ -12,6 +12,7 @@ pipeline {
         stage('pre requise install') {
             steps {
                 sh 'pip3 install -r requirements.txt'
+                sh 'pip install --upgrade robotframework-appiumlibrary'
                 script {
                     DEVICE = params.DevicesName.replaceAll(' ', '_')
                 }
