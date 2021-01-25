@@ -1,8 +1,6 @@
 *** Settings ***
 Documentation  shared keywords
 Library  FakerLibrary
-Library  RequestsLibrary
-Library  JSONLibrary
 Library  Collections
 Library  OperatingSystem
 Library  String

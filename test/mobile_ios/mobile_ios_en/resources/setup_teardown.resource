@@ -2,8 +2,6 @@
 Documentation  Mobile Test
 Resource  ../resources/keywords.resource
 Library  AppiumLibrary  
-Library  RequestsLibrary
-Library  JSONLibrary
 Library  Collections
 Library  OperatingSystem
 Library  String
