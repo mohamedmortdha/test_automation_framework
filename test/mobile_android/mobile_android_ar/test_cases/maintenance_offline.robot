@@ -6,15 +6,14 @@ Resource  ../resources/setup_teardown.resource
 Resource  ../resources/keywords.resource
 Suite Setup  Open the application
 Suite Teardown  Clean up the test suite
-Test Teardown  Run Keyword If Test Failed  Relod Application and Login
-Force Tags  Android  Maintenance Maintenance_Ar
+Test Teardown  Run Keyword If Test Failed  Relod Application
+Force Tags  Android  Maintenance_Offline Maintenance_Offline_Ar
 
 *** Variables ***
 
 *** Test Cases ***
 I Succeed to make a Request Maintenance callback from brand
-  [Tags]  Android_Ar_Maintenance_Brand
-  As User I login in app
+  [Tags]  Android_Ar_Maintenance_Offline_Brand
   I can navigate to List Brand
   I can see maintenance subcategory  نيسان
   I can make a Request Callback  Automated test  10010001  
@@ -22,7 +21,7 @@ I Succeed to make a Request Maintenance callback from brand
 
 
 I Succeed to make a Request Maintenance callback from brand using wrong information
-  [Tags]  Android_Ar_Maintenance_Brand
+  [Tags]  Android_Ar_Maintenance_Offline_Brand
   I can navigate to List Brand
   I can see maintenance subcategory  نيسان
   I make a Request Callback using wrong informations  Automated test  6677  
