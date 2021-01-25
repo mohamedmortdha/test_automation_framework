@@ -6,8 +6,6 @@ Library  OperatingSystem
 Library  String
 
 *** Keywords ***
-
-
 I should sees profile screen
   [Arguments]  ${name}  ${email}  
   Wait Until Page Contains Element  id=com.kuwait.showroomz.refac:id/profile_txt
