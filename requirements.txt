@@ -1,3 +1,4 @@
 Appium-Python-Client==1.0.2
 robotframework==3.2.2
 robotframework-appiumlibrary==1.5.0.6
+robotframework-faker==5.0.0
