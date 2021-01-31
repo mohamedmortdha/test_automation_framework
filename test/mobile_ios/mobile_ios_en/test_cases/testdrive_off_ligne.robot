@@ -27,8 +27,42 @@ I Succeed to make a Request test drive from brand using wrong informations
   I can navigate to the details of the model  BMW  M5
   I can make a test drive with wrong informations  Mohamd Amine  6677  testAuto@test.com
   I go back to menu from model details  
-  [Teardown]  NONE
 
+
+I Succeed to make a Request test drive from Recently Viewed
+  [Tags]  Ios_en_testdrive_recently_view_off_ligne
+  I visit a model and back to menu  BMW  M5
+  I select mode From Recently Viewed
+  I can make a test drive  Mohamd Amine  66770000  testAuto@test.com
+  I go back to menu from model details Recently Viewed 
+
+I Succeed to make a Request test drive from Recently Viewed using wrong informations
+  [Tags]  Ios_en_testdrive_wrong_recently_view_off_ligne
+  I visit a model and back to menu  BMW  M5
+  I select mode From Recently Viewed
+  I can make a test drive with wrong informations  Mohamd Amine  6677  testAuto@test.com
+  I go back to menu from model details Recently Viewed 
+
+
+I Succeed to make a Request testdrive from FAVORITES
+  [Tags]  Ios_en_testdrive_FAVORITES_off_ligne
+  I visit a model add it to favorites and back to menu  BMW  M5
+  I can Open Menu
+  I select favorites Item
+  I select mode From favorites List  M5
+  I can make a test drive  Mohamd Amine  66770000  testAuto@test.com
+  I go back to menu from model details favorites
+
+
+I Succeed to make a Request testdrive from FAVORITES using wrong informations
+  [Tags]  Ios_en_testdrive_FAVORITES_wrong_off_ligne
+  I visit a model add it to favorites and back to menu  BMW  M5
+  I can Open Menu
+  I select favorites Item
+  I select mode From favorites List  M5
+  I can make a test drive with wrong informations  Mohamd Amine  6677  testAuto@test.com
+  I go back to menu from model details favorites
+  [Teardown]  NONE
 
 *** Keywords ***
 
