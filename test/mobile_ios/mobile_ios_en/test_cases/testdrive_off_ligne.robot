@@ -19,8 +19,15 @@ I Succeed to make a Request test drive from brand
   I can navigate to the details of the model  BMW  M5
   I can make a test drive  Mohamd Amine  66770000  testAuto@test.com
   I go back to menu from model details  
-  [Teardown]  NONE
 
+I Succeed to make a Request test drive from brand using wrong informations
+  [Tags]  Ios_en_testdrive_brand_wrong_off_ligne
+  I can navigate to List Brand
+  I can navigate to List of models  BMW
+  I can navigate to the details of the model  BMW  M5
+  I can make a test drive with wrong informations  Mohamd Amine  6677  testAuto@test.com
+  I go back to menu from model details  
+  [Teardown]  NONE
 
 
 *** Keywords ***
@@ -84,6 +91,22 @@ I can make a test drive
   I validate test drive request 
   I should see success pop up
 
+I can make a test drive with wrong informations
+  [Arguments]  ${nom_user}  ${phone_number}  ${email}
+  I can see model Actions buttons
+  I click test drive Action button
+  I can select location  Al Shuwaikh
+  I select date test drive at showroom
+  I select timing test drive at showroom  13:00
+  I enter correct information  ${nom_user}  ${phone_number}  ${email}
+  I validate test drive request 
+  I cannot proceed Callback Request
+
+I cannot proceed Callback Request
+  Click Element  accessibility_id=close icon
+  Sleep  2s
+  Click Element  accessibility_id=back
+
 I validate test drive request
   Click Element  accessibility_id=tick mark icon
 
@@ -112,23 +135,11 @@ I click test drive Action button
   Click Element  accessibility_id=Test Drive
   Wait Until Element Is Visible  accessibility_id=Prefered Showroom
 
-I passed a callback Request
-  [Arguments]  ${nom_user}  ${false_phone_number}  ${phone_number}  
-  I have access to callback popup
-  I set Full name  ${nom_user}
-  I set false Phone Number  ${false_phone_number}
-  I validate Callback Request
-  I cannot proceed Callback Request
-  I set Phone Number  ${phone_number}
-  I validate Callback Request
-  I should see success pop up
+
 
 I set civilId
   [Arguments]  ${civil_id}
   AppiumLibrary.Input Text  xpath=//XCUIElementTypeApplication[@name="Showroomz_refac"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField[3]  ${civil_id}
-
-I cannot proceed Callback Request
-  Page Should Contain Element  xpath=//XCUIElementTypeApplication[@name="Showroomz_refac"]/XCUIElementTypeWindow[1]/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeOther/XCUIElementTypeTextField[2]
 
 I validate Callback Request
   Click Element  accessibility_id=tick mark icon
